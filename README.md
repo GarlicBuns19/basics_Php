@@ -1,3 +1,7 @@
 # basics_Php
-Basics of Php
-Put in htdocs of xammp folder
+<h3>
+  Basics of Php
+</h3>
+<p>
+  Put in htdocs of xammp folder
+</p>
