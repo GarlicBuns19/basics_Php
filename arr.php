@@ -1,4 +1,21 @@
 <?php
+    
+    session_start();
+    // session_destroy();
+    
+    // url?noname
+    if($_SERVER['QUERY_STRING'] == 'noname'){
+        unset($_SESSION['name']);
+    }
+    
+    // nullish coalescing operator
+    $name = $_SESSION['name'] ?? 'Guest';
+    echo htmlspecialchars($name);
+    
+    // get cookie
+    $gender = $_COOKIE['gender'] ?? 'Unknown';
+    echo htmlspecialchars($gender);
+
     $products = [
         ['name' => 'shiny star', 'price' => 20],
         ['name' => 'green shell', 'price' => 10],
@@ -20,7 +37,7 @@
 <body>
     <pre>
         <?php
-            echo print_r($products);
+            print_r($products);
         ?>
     </pre>
 </body>
